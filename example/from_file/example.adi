@@ -1,0 +1,14 @@
+<programid:7>MonoLog
+<USERDEF1:8:N>QRP_ARCI
+<USERDEF2:19:E>SweaterSize,{S,M,L}
+
+<USERDEF3:15>ShoeSize,{5:20}
+<EOH>
+<call:6>AAAAAA<band:3>17M<mode:4>RTTY<qso_date:8>19960513<time_on:4>1305<eor>
+
+<call:6>BBBBBB
+
+<band:3>20M
+<mode:3>FT8
+<qso_date:8>19960513
+<time_on:4>1305<eor>`
