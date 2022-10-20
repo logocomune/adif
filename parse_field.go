@@ -34,9 +34,6 @@ func ParseField(s string) map[string]Data {
 		if atoi, err := strconv.Atoi(v); err == nil {
 			lDataSpecified = atoi
 		}
-		if lDataSpecified == 0 {
-			log.Printf("Lenght cannot be 0: %s\n", v)
-		}
 		tDataSpecified := ""
 		if len(dataSpecifierSplitted) >= 3 {
 			tDataSpecified = dataSpecifierSplitted[2]
