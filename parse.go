@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"errors"
 	"os"
+	"sort"
 	"strings"
 )
 
@@ -81,8 +82,14 @@ func parseScanner(scanner *bufio.Scanner) (Decoded, error) {
 	for k := range headerFields {
 		d.HeadersFields = append(d.HeadersFields, k)
 	}
+	if len(d.HeadersFields) > 1 {
+		sort.Strings(d.HeadersFields)
+	}
 	for k := range rowsFields {
 		d.RowsFields = append(d.RowsFields, k)
+	}
+	if len(d.RowsFields) > 1 {
+		sort.Strings(d.RowsFields)
 	}
 	err := scanner.Err()
 

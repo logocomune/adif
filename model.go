@@ -5,20 +5,19 @@ import (
 	"time"
 )
 
-// http://www.adif.org.uk/313/ADIF_313.htm
 
 type Decoded struct {
-	Headers       map[string]Data
-	HeadersFields []string
-	Rows          []map[string]Data
-	RowsFields    []string
+	Headers       map[string]Data   `json:"headers"`
+	HeadersFields []string          `json:"headersFields"`
+	Rows          []map[string]Data `json:"rows"`
+	RowsFields    []string          `json:"rowsFields"`
 }
 
 type Data struct {
-	FieldName string
-	DataType  string
-	Length    int
-	Data      string
+	FieldName string `json:"fieldName"`
+	DataType  string `json:"dataType"`
+	Length    int    `json:"length"`
+	Data      string `json:"data"`
 }
 
 func Date(d, t string) (time.Time, error) {
